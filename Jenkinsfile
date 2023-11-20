@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Tag the image') {
       steps {
-        sh 'podman tag darinpope/helloworld:2023-11-18 darinpope/hello-world:latest'
+        sh 'podman tag darinpope/hello-world:2023-11-18 darinpope/hello-world:latest'
       }
     }
     stage('Push the image') {
