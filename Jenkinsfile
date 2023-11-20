@@ -22,8 +22,8 @@ pipeline {
     stage('Push the image') {
       steps {
         sh '''
-          podman push docker.io/darinpope/hello-world:2023-11-18
-          podman push docker.io/darinpope/hello-world:latest
+          podman push darinpope/hello-world:2023-11-18
+          podman push darinpope/hello-world:latest
         '''
       }
     }
