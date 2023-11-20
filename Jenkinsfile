@@ -4,6 +4,11 @@ pipeline {
     DH_CREDS=credentials('dh-creds')
   }
   stages {
+    stage('Remove all images from agent') {
+      steps {
+        sh 'podman rmi --all --force'
+      }
+    }
     stage('build image') {
       steps {
         sh 'podman build -t darinpope/hello-world:2023-11-18 .'
